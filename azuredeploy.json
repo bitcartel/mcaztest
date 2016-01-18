@@ -195,14 +195,14 @@
           "fileUris": [
             "https://raw.githubusercontent.com/bitcartel/mcaztest/master/test.sh"
           ],
-          "commandToExecute": "[concat('sh test.sh ', parameters('adminUsername'), 'chain1')]"
+          "commandToExecute": "[concat('sh test.sh ', parameters('adminUsername'))]"
         }
       }
     }
   ],
   "outputs": {
     "connectAddress": {
-      "value": "[concat('chain1@', reference(resourceId('Microsoft.Network/publicIPAddresses', variables('publicIpAddressName'))).dnsSettings.fqdn, '/')]",
+      "value": "[concat('chain1@', variables('publicIpAddressName'), ':8333')]",
       "type": "string"
     },
     "instructions": {
