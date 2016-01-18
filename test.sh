@@ -11,13 +11,13 @@ date
 #############
 
 AZUREUSER=$1
-CHAINNAME=chain1
-
 HOMEDIR="/home/$AZUREUSER"
 VMNAME=`hostname`
+CHAINNAME="chain1"
 echo "User: $AZUREUSER"
 echo "User home dir: $HOMEDIR"
 echo "vmname: $VMNAME"
+echo "chain name: $CHAINNAME"
 
 # This is run as root
 cd $(mktemp -d)
@@ -26,7 +26,7 @@ tar xvf multichain-latest.tar.gz
 cp multichain-1.0-alpha*/multichain* /usr/local/bin/
 
 # As regular user
-su AZUREUSER
+su $AZUREUSER
 cd $HOMEDIR
 multichain-util create ${CHAINNAME}
 sed -i "s/^default-network-port =.*/default-network-port = 8333/" $HOME/.multichain/${CHAINNAME}/params.dat
