@@ -208,10 +208,6 @@
     "instructions": {
       "value": "Other MultiChain nodes can use this address to connect to the blockchain.",
       "type": "string"
-    },
-    "masterip": {
-      "value": "[reference(variables('nicName')).ipConfigurations[0].properties.privateIPAddress]",
-      "type": "string"
     }
   }
 }
