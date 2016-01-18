@@ -19,17 +19,22 @@ echo "User: $AZUREUSER"
 echo "User home dir: $HOMEDIR"
 echo "vmname: $VMNAME"
 
+# This is run as root
 cd $(mktemp -d)
 wget http://www.multichain.com/download/multichain-latest.tar.gz
 tar xvf multichain-latest.tar.gz
-sudo cp multichain-1.0-alpha*/multichain* /usr/local/bin/
-sed -i "s/^default-network-port =.*/default-network-port = 8333/" $HOME/.multichain/${CHAINNAME}/params.dat
-sed -i "s/^default-rpc-port =.*/default-rpc-port = 8332/" $HOME/.multichain/${CHAINNAME}/params.dat
+cp multichain-1.0-alpha*/multichain* /usr/local/bin/
+
+# As regular user
+su AZUREUSER
 cd $HOMEDIR
 multichain-util create ${CHAINNAME}
+sed -i "s/^default-network-port =.*/default-network-port = 8333/" $HOME/.multichain/${CHAINNAME}/params.dat
+sed -i "s/^default-rpc-port =.*/default-rpc-port = 8332/" $HOME/.multichain/${CHAINNAME}/params.dat
 multichaind ${CHAINNAME} -daemon
 sleep 5
 multichain-cli getinfo ${CHAINNAME}
+exit
 
 date
 echo "Completed MultiChain install $$"
