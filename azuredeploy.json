@@ -193,7 +193,7 @@
         "autoUpgradeMinorVersion": true,
         "settings": {
           "fileUris": [
-            "test.sh"
+            "https://raw.githubusercontent.com/bitcartel/mcaztest/master/test.sh"
           ],
           "commandToExecute": "[concat('sh test.sh ', parameters('adminUsername'))]"
         }
