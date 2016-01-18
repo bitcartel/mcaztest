@@ -202,7 +202,7 @@
   ],
   "outputs": {
     "connectAddress": {
-      "value": "[concat('chain1@', reference(resourceId('Microsoft.Network/publicIPAddresses', variables('publicIpAddressName'))).dnsSettings.fqdn, ':8333')]",
+      "value": "[concat('chain1@', reference(resourceId('Microsoft.Network/publicIPAddresses', variables('publicIpAddressName'))).dnsSettings.fqdn, ':4333')]",
       "type": "string"
     },
     "instructions": {
