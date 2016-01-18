@@ -210,7 +210,7 @@
       "type": "string"
     },
     "masterip": {
-      "value": "[reference(concat(variables('nicName'),0)).ipConfigurations[0].properties.privateIPAddress]",
+      "value": "[reference(variables('nicName')).ipConfigurations[0].properties.privateIPAddress]",
       "type": "string"
     }
   }
