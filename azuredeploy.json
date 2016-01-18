@@ -29,7 +29,7 @@
     },
     "vmSize": {
       "type": "string",
-      "defaultValue": "Standard_D1",
+      "defaultValue": "Standard_A1",
       "allowedValues": [
         "Standard_A1",
         "Standard_A2",
@@ -50,7 +50,7 @@
     "addressPrefix": "10.0.0.0/16",
     "imagePublisher": "Canonical",
     "imageVersion": "latest",
-    "imageSKU": "14.04.3-LTS",
+    "imageSKU": "14.04.2-LTS",
     "imageOffer": "UbuntuServer",
     "subnetName": "Subnet-1",
     "subnetPrefix": "10.0.0.0/24",
