@@ -195,7 +195,7 @@
           "fileUris": [
             "https://raw.githubusercontent.com/bitcartel/mcaztest/master/test.sh"
           ],
-          "commandToExecute": "[concat('sh test.sh ', parameters('adminUsername'), 'chain1')]"
+          "commandToExecute": "[concat('sh test.sh ', parameters('adminUsername'))]"
         }
       }
     },

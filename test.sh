@@ -11,7 +11,7 @@ date
 #############
 
 AZUREUSER=$1
-CHAINNAME=$2
+CHAINNAME=chain1
 
 HOMEDIR="/home/$AZUREUSER"
 VMNAME=`hostname`
