@@ -198,6 +198,6 @@
           "commandToExecute": "[concat('sh test.sh ', parameters('adminUsername'))]"
         }
       }
-    },
+    }
   ]
 }
