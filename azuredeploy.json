@@ -206,7 +206,7 @@
       "type": "string"
     },
     "instructions": {
-      "value": "Other MultiChain nodes can use this address to connect to the blockchain.",
+      "value": "Nodes can connect to the blockchain using the connect address above, for example: multichaind connectAddress",
       "type": "string"
     }
   }
