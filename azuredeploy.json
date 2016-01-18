@@ -195,9 +195,19 @@
           "fileUris": [
             "https://raw.githubusercontent.com/bitcartel/mcaztest/master/test.sh"
           ],
-          "commandToExecute": "[concat('sh test.sh ', parameters('adminUsername'))]"
+          "commandToExecute": "[concat('sh test.sh ', parameters('adminUsername'), 'chain1')]"
         }
       }
+    },
+  ],
+  "outputs": {
+    "connectAddress": {
+      "value": "[concat('chain1@', reference(resourceId('Microsoft.Network/publicIPAddresses', variables('publicIpAddressName'))).dnsSettings.fqdn, '/')]",
+      "type": "string"
+    },
+    "instructions": {
+      "value": "Other MultiChain nodes can use this address to connect to the blockchain.",
+      "type": "string"
     }
-  ]
+  }
 }
