@@ -26,15 +26,13 @@ tar xvf multichain-latest.tar.gz
 cp multichain-1.0-alpha*/multichain* /usr/local/bin/
 
 # As regular user
-su $AZUREUSER
-cd $HOMEDIR
-multichain-util create ${CHAINNAME}
-sed -i "s/^default-network-port =.*/default-network-port = 8333/" $HOME/.multichain/${CHAINNAME}/params.dat
-sed -i "s/^default-rpc-port =.*/default-rpc-port = 8332/" $HOME/.multichain/${CHAINNAME}/params.dat
-multichaind ${CHAINNAME} -daemon
+su -l $AZUREUSER -c "multichain-util create ${CHAINNAME}"
+su -l $AZUREUSER -c "sed -i \"s/^default-network-port =.*/default-network-port = 8333/\" $HOMEDIR/.multichain/${CHAINNAME}/params.dat"
+su -l $AZUREUSER -c "sed -i \"s/^default-rpc-port =.*/default-rpc-port = 8332/\" $HOMEDIR/.multichain/${CHAINNAME}/params.dat"
+su -l $AZUREUSER -c "multichaind ${CHAINNAME} -daemon"
 sleep 5
-multichain-cli getinfo ${CHAINNAME}
-exit
+su -l $AZUREUSER -c "multichain-cli ${CHAINNAME} getinfo"
+
 
 date
 echo "Completed MultiChain install $$"
