@@ -25,3 +25,7 @@ Install Multichain on a second computer and run the command `multichaind <connec
 
 More information about how to connect to a blockchain and grant permissions can be found in the [http://www.multichain.com/getting-started/](Getting Started) tutorial.
 
+# Tips
+
+* If you want to experiment with two separate chains, create a new Resource Group, and use it to launch the template again.
+
