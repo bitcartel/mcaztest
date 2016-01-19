@@ -1,4 +1,4 @@
-# Deploying MultiChain on Microsoft Azure
+## Deploying MultiChain on Microsoft Azure
 
 This Microsoft Azure template deploys a MultiChain node to create a new private blockchain.
 
@@ -6,7 +6,7 @@ This Microsoft Azure template deploys a MultiChain node to create a new private 
 
 Once your deployment is complete you will have a private blockchain called 'chain1' and you can connect to the node from other computers with MultiChain installed.
 
-# Template Parameters
+## Template Parameters
 
 When you launch the installation of the VM, you need to specify the following parameters:
 
@@ -19,13 +19,13 @@ When you launch the installation of the cluster, you need to specify the followi
 
 Once the deployment has completed, you will receive the ``connectAddress`` that can be used to connect to your new blockchain.  The blockchain's name is ``chain1`` and the deployed MultiChain name has the role of Administrator.
 
-# Connect to the blockchain from another computer
+## Connect to the blockchain from another computer
 
 Install Multichain on a second computer and run the command `multichaind <connectAddress>` where the ``connectAddress`` argument was obtained after deployment and should look something like `chain1@magicunicorns.westus.cloudapp.azure.com:8333`.
 
 More information about how to connect to a blockchain and grant permissions can be found in the [http://www.multichain.com/getting-started/](Getting Started) tutorial.
 
-# Tips
+## Tips
 
-* If you want to experiment with two separate chains, create a new Resource Group, and use it to launch the template again.
+If you want to experiment with two separate chains, create a new Resource Group, and use it to launch the template again.
 
