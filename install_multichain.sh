@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Debug
 set -x
 
 echo "Initializing MultiChain installation"
@@ -21,7 +22,7 @@ echo "chain name: $CHAINNAME"
 
 # This is run as root
 cd $(mktemp -d)
-wget http://www.multichain.com/download/multichain-latest.tar.gz
+wget --no-verbose http://www.multichain.com/download/multichain-latest.tar.gz
 tar xvf multichain-latest.tar.gz
 cp multichain-1.0-alpha*/multichain* /usr/local/bin/
 

@@ -5,7 +5,7 @@
     "storageAccountNamePrefix": {
       "value": "GEN-UNIQUE-11"
     },
-    "vmDnsPrefix": {
+    "vmDnsName": {
       "value": "GEN-UNIQUE-11"
     },
     "adminUsername": {
@@ -15,7 +15,7 @@
       "value": "GEN-PASSWORD"
     },
     "vmSize": {
-      "value": "Standard_A1"
+      "value": "Standard_D1"
     }
   }
 }
