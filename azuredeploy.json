@@ -3,6 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "storageAccountNamePrefix": {
+      //"defaultValue": "simon132",
       "type": "string",
       "maxLength": 11,
       "metadata": {
@@ -47,13 +48,13 @@
   },
   "variables": {
     "nicName": "VMNic",
-    "addressPrefix": "10.0.0.0/16",
+    "addressPrefix": "127.0.0.0/16",
     "imagePublisher": "Canonical",
     "imageVersion": "latest",
     "imageSKU": "14.04.2-LTS",
     "imageOffer": "UbuntuServer",
     "subnetName": "Subnet-1",
-    "subnetPrefix": "10.0.0.0/24",
+    "subnetPrefix": "127.0.0.0/24",
     "storageAccountType": "Standard_LRS",
     "publicIPAddressName": "publicIP",
     "publicIPAddressType": "Dynamic",
@@ -193,7 +194,7 @@
         "autoUpgradeMinorVersion": true,
         "settings": {
           "fileUris": [
-            "https://raw.githubusercontent.com/bitcartel/mcaztest/master/test.sh"
+            "https://raw.githubusercontent.com/bitcartel/mcaztest/master/install_multichain.sh"
           ],
           "commandToExecute": "[concat('sh test.sh ', parameters('adminUsername'))]"
         }

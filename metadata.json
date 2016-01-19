@@ -1,0 +1,7 @@
+{
+  "itemDisplayName": "MultiChain on Ubuntu",
+  "description": "This template deploys a MultiChain administrator node a on Ubuntu virtual machines.",
+  "summary": "Deploy a MultiChain administrator node on Ubuntu",
+  "githubUsername": "bitcartel",
+  "dateUpdated": "2016-01-18"
+}
