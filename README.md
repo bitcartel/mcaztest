@@ -25,7 +25,7 @@ Install Multichain on a second computer and run the command `multichaind <connec
 
 The ``connectAddress`` argument was obtained after deployment and should look something like `chain1@magicunicorns.westus.cloudapp.azure.com:8333`.
 
-More information about how to connect to a blockchain and grant permissions can be found in the [http://www.multichain.com/getting-started/](Getting Started) tutorial.
+More information about how to connect to a blockchain and grant permissions can be found in the [Getting Started](http://www.multichain.com/getting-started/) tutorial.
 
 ## Tips
 
